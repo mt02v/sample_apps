@@ -4,12 +4,12 @@ class UsersController < ApplicationController
   before_action :admin_user,   only: :delete
 
   def index
-    @user = User.where(activated:  ).paginate(page: params:page])
+    @user = User.where(activated:).paginate(page: params:page])
   end
 
   def show
     @user = User.find(params[:id])
-    redirect_to root_url and return unless 
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def new
