@@ -60,9 +60,3 @@ gem 'bcrypt', '3.1.12'
 gem 'faker'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'will_paginate'
-gem 'bootstrap-will_paginate'
-
-group :production do
-  gem 'fog'
-  end
